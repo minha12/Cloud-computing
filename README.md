@@ -25,6 +25,7 @@ We have made four test cases with the two matrix operations and two cluster conf
 ----
 ## Result comparison
 First, we compare the execution time to see how the Spark could speed up the matrix computation. We noticed that there is no significant difference between the addition and multiplication. However, when we use the high-profile cluster the execution time is significantly lower which showed that the matrix computation could be much more efficient with cloud computing.
+
 ![alt text](https://github.com/minha12/Cloud-computing/blob/master/images/Exection_time.png)
 
 We also saw the same pattern when it comes to CPU and memory usages.
