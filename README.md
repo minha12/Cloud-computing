@@ -21,7 +21,7 @@ We chose two basic matrix operations to evaluate the LINALG library, they are ad
 
 ----
 ## Submitting a job to a cluster
-We have made four test cases with the two matrix operations and two cluster configurations. Each test case is submitted as one "job" to the cluster. For the least computational delay, it is required that the Bucket and Cluster should be in the same geographical region. While the job is running, we can monitor the process by visual tools in the web UI of the cluster. We can see here the information such as memory usage, CPU usages, YARN pending memory, network bytes, disk byte, etc. More details information could be seen via StackDrive - an intuitive monitoring interface of Google Cloud. 
+We have made four test cases with the two matrix operations and two cluster configurations. Each test case is submitted one-by-one as a single "job" to the cluster. For the least computational delay, it is required that the Bucket and Cluster should be in the same geographical region. While the job is running, we can monitor the process by visual tools in the web UI of the cluster. We can see here the information such as memory usage, CPU usages, YARN pending memory, network bytes, disk byte, etc. More details information could be seen via StackDrive - an intuitive monitoring interface of Google Cloud. 
 
 ----
 ## Result comparison
