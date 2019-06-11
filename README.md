@@ -1,7 +1,7 @@
 # Evaluating matrix computation in LINALG [1] library of Spark on Google Cloud
 ----
 ## Abstract
-This is a report for the assignment of the Cloud Module within the Software Engineering and Cloud Computing course - WASP project. We will go through the process from setting up the Goolge Cloud to the final goal of evaluating matrix computation required by the Project 1 of the assignment. 
+> This is a report for the assignment of the Cloud Module within the Software Engineering and Cloud Computing course - WASP project. We will go through the process from setting up the Goolge Cloud to the final goal of evaluating matrix computation required by the Project 1 of the assignment. 
 ----
 ## Setup Google Cloud
 
