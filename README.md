@@ -16,6 +16,7 @@ After creating the clusters, the master node in each cluster can be accessed by 
 ----
 ## Choosing data and matrix operations
 The given dataset [2] has many different kinds of data from multiple applications. They are widely different in structure and size. We chose the matrix market data type since it is more suitable for loading in Python. Some of the basic matrix operations in the LINALG library of Spark has limitations of the number of rows and columns up to 65535 so that we chose a data set which has dimensions as close as this limit as possible. Our choice is a "Subsequent Computational Fluid Dynamics Problem" dataset named venkat50 which has a size of 62424 x 62424. The package is firstly pre-processed to fit with input format of Spark and to reduce the data handling time since we are focusing on evaluating the matrix computation only.
+
 We chose two basic matrix operation to evaluate the LINALG library, they are addition and multiplication. Of course, we could pick other matrix operations with slightly changes in our test cases as well, however, the chosen ones are the most fundamental operation and they are fitted for the goal of this project which is evaluating matrix computation. The two methods are evaluated separately on the low-profile configuration and high-profile cluster.  
 
 ----
