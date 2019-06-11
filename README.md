@@ -15,10 +15,6 @@ In order to set up virtual machines on Google Cloud to run the experiment, there
 ## Setting up Python environment in clusters
 After creating the clusters, the master node in each cluster can be accessed by SSH. In there, we can install packages which are needed for running the python files. For example, some packages such as scipy and tensorflow were installed in the master node of each cluster in our experiments. In the SSH console, we can sync files between the node and the Bucket. The benefit of this feature is that we can modify the code files or data files directly in the console without re-uploading the files from local computer to Bucket. 
 
->CPU usage of 3-node cluster displaying in StackDrive:
-
-![alt text](https://github.com/minha12/Cloud-computing/blob/master/images/CPU-3-node-add.png)
-
 ----
 ## Choosing data and matrix operations
 The given dataset [2] has many different kinds of data from multiple applications. They are widely different in structure and size. We chose the matrix market data type since it is more suitable for loading in Python. Some of the basic matrix operations in the LINALG library of Spark has limitations of the number of rows and columns up to 65535 so that we chose a data set which has dimensions as close as this limit as possible. Our choice is a "Subsequent Computational Fluid Dynamics Problem" dataset named venkat50 which has a size of 62424 x 62424. The package is firstly pre-processed to fit with input format of Spark and to reduce the data handling time since we are focusing on evaluating the matrix computation only.
@@ -28,6 +24,10 @@ We chose two basic matrix operations to evaluate the LINALG library, they are ad
 ----
 ## Submitting a job to a cluster
 We have made four test cases with the two matrix operations and two cluster configurations. Each test case is submitted one-by-one as a single "job" to the cluster. For the least computational delay, it is required that the Bucket and Cluster should be in the same geographical region. While the job is running, we can monitor the process by visual tools in the web UI of the cluster. We can see here the information such as memory usage, CPU usages, YARN pending memory, network bytes, disk byte, etc. More details information could be seen via StackDrive - an intuitive monitoring interface of Google Cloud. 
+
+>CPU usage of 3-node cluster displaying in StackDrive:
+
+![alt text](https://github.com/minha12/Cloud-computing/blob/master/images/CPU-3-node-add.png)
 
 ----
 ## Result comparison
