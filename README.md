@@ -1,4 +1,4 @@
-# Evaluating matrix computation in LINALG library of Spark on Google Cloud
+# Evaluating matrix computation in LINALG [1] library of Spark on Google Cloud
 
 ----
 ## Setup Google Cloud
@@ -15,7 +15,7 @@ After creating the clusters, the master node in each cluster can be accessed by 
 
 ----
 ## Choosing data and matrix operations
-The given data has many different kinds of data from multiple applications. They are widely different in structure and size. We chose the matrix market data type since it is more suitable for loading in Python. Some of the basic matrix operations in the LINALG library of Spark has limitations of the number of rows and columns up to 65535 so that we chose a data set which has dimensions as close as this limit as possible. Our choice is a "Subsequent Computational Fluid Dynamics Problem" dataset named venkat50 which has a size of 62424 x 62424. The package is firstly pre-processed to fit with input format of Spark and to reduce the data handling time since we are focusing on evaluating the matrix computation only.
+The given dataset [2] has many different kinds of data from multiple applications. They are widely different in structure and size. We chose the matrix market data type since it is more suitable for loading in Python. Some of the basic matrix operations in the LINALG library of Spark has limitations of the number of rows and columns up to 65535 so that we chose a data set which has dimensions as close as this limit as possible. Our choice is a "Subsequent Computational Fluid Dynamics Problem" dataset named venkat50 which has a size of 62424 x 62424. The package is firstly pre-processed to fit with input format of Spark and to reduce the data handling time since we are focusing on evaluating the matrix computation only.
 We chose two basic matrix operation to evaluate the LINALG library, they are addition and multiplication. Of course, we could pick other matrix operations with slightly changes in our test cases as well, however, the chosen ones are the most fundamental operation and they are fitted for the goal of this project which is evaluating matrix computation. The two methods are evaluated separately on the low-profile configuration and high-profile cluster.  
 
 ----
@@ -32,7 +32,12 @@ We also saw the same pattern when it comes to CPU and memory usages.
 [IMG]
 
 ----
-##Conclusion
+## Conclusion
 We have learned a lot about Cloud Computing during this assignment. We can set up the Google Cloud for our use of high-demand computation now. The important lesson here is to see that the Cloud Computing system is really helpful when it comes to big data and machine learning. The task which may require days to run on a local computer now can be hours or lower with the new technology. 
 
 With the experiment on the LINALG library of Spark, we have tried for ourself to see that the Cloud Computing works. The learning process by trial-and-error was quite fun but in some cases, we really hoped for an official tutorial to start with. It may be too easy with someones who have already had the experience with this system, however, it could be a daunting task for beginners. 
+
+----
+## Reference
+[1] https://spark.apache.org/docs/1.5.1/api/java/org/apache/spark/mllib/linalg/package-frame.html 
+[2] https://sparse.tamu.edu/ 
