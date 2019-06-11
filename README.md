@@ -29,8 +29,9 @@ First, we compare the execution time to see how the Spark could speed up the mat
 
 ![alt text](https://github.com/minha12/Cloud-computing/blob/master/images/Exection_time.png)
 
-We also saw the same pattern when it comes to CPU and memory usages.
-[IMG]
+Regarding CPU usages we saw the 3-node cluster used much lesser CPU resource, however, it used more Memory. The reason is probably due to the fact that it could afford using more RAM.
+
+![alt text](https://github.com/minha12/Cloud-computing/blob/master/images/CPU_Mem.png)
 
 ----
 ## Conclusion
