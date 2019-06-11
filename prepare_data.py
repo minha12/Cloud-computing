@@ -13,8 +13,8 @@ def read_data(path):
 
 path = 'venkat50.mtx'
 Data = read_data(path)
-n=1000 # rows number
-m=1000 # columns number
+n=int(sys.argv[1]) # rows number
+m=int(sys.argv[2]) # columns number
 
 np.savetxt('matrix.csv', Data[:4*m*n], delimiter = ',')
 
